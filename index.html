@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Dominik Derigs :: SILCC Meeting (Heidelberg, 2017)</title>
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/pdf.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+
+		<!-- Modify CSS code such that there is no border around images -->
+		<style type="text/css">
+			.reveal section img {
+			  margin: 15px 0px;
+			  background:none; border:none; box-shadow:none;
+			}
+			.reveal .footer {
+			  position: absolute;
+			  bottom: -4em;
+			  left: -1em;
+			  font-size: .5em;
+			}
+		</style>
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+
+			// Printing support by calling: index.html?print-pdf#/
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = '../reveal.js/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+	</head>
+
+	<body><div class="reveal"><div class="slides">
+
+		<section>
+			<center><img src="Branches1.svg" width="1000px"></center>
+			<h1>SILCC Code Management</h1>
+			<h3>SILCC Workshop 17.04</h3>
+			<p>Dominik Derigs</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p><img height="300px" src="PH1.png"></p>
+		</section>
+
+		<section>
+			<section>
+				<h2>The idea</h2>
+				<p>&nbsp;</p>
+				<ul>
+					<li class="fragment">Mode of operation from chaotic to well-structured!</li>
+					<li class="fragment">Tools we want to use for this: <span class="fragment highlight-green">Pull Requests</span> &amp; <span class="fragment highlight-green">Code Approvals</span></li>
+				</ul>
+				<p class="fragment">Currently active branches:</p>
+					<ul>
+						<li class="fragment">stable &nbsp;&nbsp;&nbsp;&rarr;&nbsp;&nbsp;&nbsp; used for production runs, not allowed to break!</li>
+						<li class="fragment">testing &nbsp;&nbsp;&nbsp;&rarr;&nbsp;&nbsp;&nbsp; bleeding edge development, newest features and bugfixes</li>
+						<li class="fragment">4.3, 4.4 &nbsp;&nbsp;&nbsp;&rarr;&nbsp;&nbsp;&nbsp; future master branches</li>
+						<li class="fragment">several others &nbsp;&nbsp;&nbsp;&rarr;&nbsp;&nbsp;&nbsp; feature branches</li>
+					</ul>
+				</p>
+			</section>
+			<section>
+				<h2>Part 1: Pull Requests</h2>
+				<p class="fragment">Pull requests provide a</p>
+					<ul>
+						<li class="fragment">user-friendly web interface for </li>
+						<li class="fragment"><span class="fragment highlight-green">discussing</span> proposed changes</li>
+						<li class="fragment"><span class="fragment highlight-red">before</span> integrating them into the official project</li>
+					</ul>
+				</p>
+				<aside class="notes">
+					<ul>
+						<li>Pull requests are a feature that makes it easier for developers to collaborate using git</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>Current and proposed modes of operation</h2>
+				<center><img class="fragment" src="chaotic.svg" width="1000px"></center>
+				<hr>
+				<center><img class="fragment" src="viaPR.svg" width="1000px"></center>
+			</section>
+			<section>
+				<h2>Pull Requests</h2>
+				<ul>
+					<li class="fragment">notify collaborators that you have completed a feature / bugfix</li>
+					<li class="fragment">indicates intention to merge changes into the main branches (<tt>testing</tt> / <tt>stable</tt>)</li>
+						<center><img class="fragment" src="PR2.svg" width="800px"></center>
+					<li class="fragment">PRs are a dedicated forum for discussing the individual proposed changes</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>In their simplest form, pull requests are a mechanism for a developer to notify team members that they have completed a feature</li>
+						<li>This lets everybody involved in the SILCC project know that they need to review the code and merge it into either the <tt>testing</tt> or even the <tt>stable</tt> branch</li>
+						<li>But, the pull request is more than just a notification - it is a dedicated forum for discussing the proposed feature. If there are any problems with the changes, teammates can post feedback in the pull request and even tweak the feature by pushing follow-up commits. All of this activity is tracked directly inside of the pull request.</li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>How does it work (1)?</h2>
+				<p class="fragment">Dominik wants to begin a new feature - he needs an isolated branch to work on</p>
+				<center><img src="Newbranch.svg" width="800px"></center>
+				<pre class="fragment" style='color:#d1d1d1;background:#000000;font-size:22pt;'><code>git pull
+git checkout -b dominiks-feature testing</code></pre>
+				<p class="fragment">This
+					<ul>
+						<li class="fragment">checks out a branch called <em>dominiks-feature</em></li>
+						<li class="fragment">based on the current version of the <em>testing</em> branch</li>
+						<li class="fragment">and the <em>-b</em> flag tells git to create a new branch</li>
+					</ul>
+				</p>
+				<p class="fragment">On this branch, I can edit and commit changes <span class="fragment highlight-green">in the usual fashion:</span></p>
+				<pre class="fragment" style='color:#d1d1d1;background:#000000;font-size:22pt;'>git commit -a</pre>
+				<aside class="notes">
+					<ul>
+						<li>building up my feature with as many commits as necessary</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>How does it work (2)?</h2>
+				<p class="fragment">Dominik adds a few commits, but isn't finished yet - however, Steffi wants to look at them</p>
+				<center><img src="Newbranch2.svg" width="800px"></center>
+				<pre class="fragment" style='color:#d1d1d1;background:#000000;font-size:22pt;'>git push -u origin dominiks-feature</pre>
+				<p class="fragment">This
+					<ul>
+						<li class="fragment">pushes the local branch called <em>dominiks-feature</em></li>
+						<li class="fragment">to the central repository usually called <em>origin</em></li>
+						<li class="fragment">and the -u flag tells git to link the new upstream branch with the local one</li>
+					</ul>
+				</p>
+				<p class="fragment">Once done, I can push new commits <span class="fragment highlight-green">in the usual fashion:</span></p>
+				<pre class="fragment" style='color:#d1d1d1;background:#000000;font-size:22pt;'>git push</pre>
+				<aside class="notes">
+					<ul>
+						<li>After setting up the tracking branch, I can call git push without any parameters to push my changes</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>How does it work (3)?</h2>
+				<p class="fragment">Dominik completes his feature. Instead of merging into <em>testing</em>, he files a PR on Bitbucket</p>
+				<pre class="fragment" style='color:#d1d1d1;background:#000000;font-size:22pt;'>git push</pre>
+				<center><img class="fragment" src="PR1.svg" width="500px"></center>
+			</section>
+			<section>
+				<h2>How does it work (4)?</h2>
+				<center><img src="PR_creation.png" width="1200px"></center>
+			</section>
+			<section>
+				<h2>How does it work (5)?</h2>
+				<center><img src="PR_opened.png" width="1200px"></center>
+			</section>
+			<section>
+				<h2>How does it work (6)?</h2>
+				<center><img src="comment.png" width="1000px"></center>
+			</section>
+			<section>
+				<h2>How does it work (7)?</h2>
+				<p>Richard reviews my PR</p>
+				<center><img src="PR_review_1.svg" width="1000px"></center>
+				<p>&nbsp;</p>
+			</section>
+			<section>
+				<h2>How does it work (7)?</h2>
+				<p>Richard reviews my PR</p>
+				<center><img src="PR_review_2.svg" width="1000px"></center>
+				<p>He requests changes because it is likely that my changes will break gravity</p>
+			</section>
+			<section>
+				<h2>How does it work (8)?</h2>
+				<p>Dominik makes the requested changes</p>
+				<center><img src="PR_review_3.svg" width="1000px"></center>
+				<p>&nbsp;</p>
+			</section>
+			<section>
+				<h2>How does it work (8)?</h2>
+				<p>Dominik makes the requested changes</p>
+				<center><img src="PR_review_4.svg" width="1000px"></center>
+				<p>Richard approves the PR - it can now be merged into the <em>testing</em> branch</p>
+			</section>
+			<section>
+				<h2>How does it work (9)?</h2>
+				<img class="stretch" src="viaPR_1.svg">
+				<p class="fragment">Summary:
+					<ul>
+						<li class="fragment">the <em>testing</em> branch was fully usable all the time</li>
+						<li class="fragment">we had a nice and dedicated way of talking about the changes</li>
+						<li class="fragment">everything will be kept and we can later look again at the PR</li>
+					</ul>
+				</p>
+
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>Current and proposed modes of operation</h2>
+				<center><img class="fragment" src="chaotic.svg" width="1000px"></center>
+				<hr>
+				<center><img class="fragment" src="viaPR.svg" width="1000px"></center>
+				<aside class="notes">
+					<ul>
+						<li>After setting up the tracking branch, I can call git push without any parameters to push my changes</li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<h2>Part 2: Pull Request Approvals</h2>
+				<p class="fragment">Pull requests are cool, but
+					<ul>
+						<li class="fragment">they don't prevent people from comitting to the main branches,</li>
+						<li class="fragment">they can be opened and merged by the author w/o review,</li>
+						<li class="fragment">we want to make them the <em>solely</em> tool to work on the code basis</li>
+					</ul>
+				</p>
+				<p class="fragment">For this we introduce <span class="fragment highlight-green">Branch restrictions</span></p>
+				<aside class="notes">
+					<ul>
+						<li>After setting up the tracking branch, I can call git push without any parameters to push my changes</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<h2>Branch restrictions</h2>
+				<center><img src="restrictions.png" width="978px"></center>
+				<p><em>stable</em> and <em>testing</em> are protected, <em>4.3 and 4.4</em> will follow</p>
+			</section>
+
+			<section>
+				<h2>Branch restrictions</h2>
+				<center><img src="restrictions_1.png" width="978px"></center>
+				<p>at least two approvals are required (e.g. PR author + someone else)</p>
+			</section>
+
+			<section>
+				<h2>Branch restrictions</h2>
+				<center><img src="restrictions_2.png" width="978px"></center>
+				<p>all tasks have to be resolved (can be created by others in the PR)</p>
+			</section>
+
+			<section>
+				<h2>Branch restrictions</h2>
+				<center><img src="restrictions_3.png" width="978px"></center>
+				<p>reset previous approvals when the PR changes (new code)</p>
+			</section>
+
+			<section>
+				<h2>Branch restrictions</h2>
+				<center><img src="restrictions_4.png" width="978px"></center>
+				<p>for <em>stable</em>, all <em>approving</em> users have to confirm the code</p>
+			</section>
+		</section>
+
+		<section>
+			<h1>Conclusion</h1>
+			<p class="fragment">Pull Requests and Approvals do not only enforce the new workflow, but also
+				<ul>
+					<li class="fragment"><span class="fragment highlight-green">reduce confusion</span>,</li>
+					<li class="fragment"><span class="fragment highlight-green">reduce time wasted</span> backing out changes that were merged prematurely,</li>
+					<li class="fragment"><span class="fragment highlight-green">protects the main branches</span> from ever being deleted or messed up,</li>
+					<li class="fragment">ensures there was <span class="fragment highlight-green">always a second pair of eyes</span> on the code.</li>
+				</ul>
+			</p>
+		</section>
+
+		</div></div>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				width: 1920,
+				height: 1280,
+
+				// Factor of the display size that should remain empty around the content
+				margin: 0.05,
+
+				// Parallax background image
+				parallaxBackgroundImage: '6980489-galactic-nebula_75black_doubly_mirrored.jpg',
+
+				// Parallax background size
+				parallaxBackgroundSize: "3100px 1800px",
+
+				// Number of pixels to move the parallax background per slide
+				// - Calculated automatically unless specified
+				// - Set to 0 to disable movement along an axis
+				parallaxBackgroundHorizontal: 200,
+				parallaxBackgroundVertical: 50,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				math: {
+					mathjax: '../reveal.js/MathJax-master/MathJax.js',
+					config: 'TeX-AMS_HTML-full',  // See http://docs.mathjax.org/en/latest/config-files.html
+					TeX: { equationNumbers: { autoNumber: "AMS" } }
+    			},
+/*				keyboard: {
+				13: 'next', // go to the next slide when the ENTER key is pressed
+				27: function() {}, // do something custom when ESC is pressed
+				32: function vidplay(){
+				      var video = document.getElementById("video");
+				      if (video.paused == true) video.play();
+				      else video.pause();
+				      }
+				 },
+*/
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../reveal.js/plugin/math/math.js', async: true },
+					// Syntax highlight for <code> elements
+					// { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+		<script> /*
+			// displayed upon load, hides when slide changes
+			Reveal.addEventListener('slidechanged', function(event) {
+			document.querySelector('.reveal .footer').style.display = 'none';
+			}); */
+		</script>
+
+	</body>
+</html>
