@@ -60,7 +60,7 @@
 	<li>I have developed a module, FragMent, which combines a number of fragmentation analysis techniques and model selection tools to characterise the fragmentation of filaments. This code is written as a python/C module and is open source. </li>
 	<li>I have developed a fully-automated spectral fitting routine, Behind The Spectrum (BTS), which allows for the fitting of entire data cubes of optically thin lines. This code is written as a python module and is open source. </li>
 	<li>I have contributed to the code, J-plots, which is a data analysis tool used to quantify the morphology of pixelated structures using their moments. It is written as a python module and is open source </li>
-	<li>I have contributed to the python package FilChaP, a tool for characterising filament properties such as their radial profiles. </li>
+	<li>I have contributed to the open source python package FilChaP, a tool for characterising filament properties such as their radial profiles. </li>
 </ul> 
 </p>
 							
@@ -121,6 +121,11 @@
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="Presentations">
 						<div class="content">
 							<h2> Recent presentations </h2>
+
+<p>
+<u> Synthetic C<sup>18</sup>O observations of fibrous filaments: the problems of mapping from PPV to PPP </u> 
+<br /> Interstellar Filament Paradigm
+<br /> Nagoya, JP, 5-9 November , 2018  </p>
 							 
 <p>
 <u> The effects of X-rays: on the fly absorption, emission, chemistry and ionisation </u> 
@@ -141,11 +146,6 @@
 <u> Filament fragmentation </u>
 <br /> Star and planet formation workshop
 <br /> Preston, UK, 2 December, 2016  </p>
-
-<p>
-<u> Fragmentation of accreting filaments: </u>
-<br /> Star formation 2016
-<br /> Exeter, UK, 21-26 August 2016 </p>
 
 						
 						
