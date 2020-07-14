@@ -20,10 +20,13 @@
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h1>Dr. Seamus Clarke</h1>
-							<p class="major"> I'm a postdoctoral researcher at the <a href="https://hera.ph1.uni-koeln.de/~walch/Steffi_Walchs_homepage/Main.html">Theoretical Astrophysics group</a> of the University of Cologne. I'm interested in star forming filaments, astrochemistry, synthetic observations and numerical methods.</p>
-							
-<a href="https://ui.adsabs.harvard.edu/#search/q=orcid%3A0000-0001-9751-4603&sort=date%20desc%2C%20bibcode%20desc" class="button">Publications</a> 
-<!-- <a href="cv/CV.pdf" class="button">CV</a> -->
+							<p class="major"> I'm a postdoctoral researcher at the <a href="https://hera.ph1.uni-koeln.de/~tac/index.html">Theoretical Astrophysics group</a> of the University of Cologne. I'm interested in star forming filaments, astrochemistry, synthetic observations and numerical methods.</p>
+
+<!--							
+<a href="#Research" class="btn btn-circle page-scroll">
+    <i class="fa fa-angle-double-down animated"></i>
+</a>
+-->
 
 
 						</div>
@@ -33,7 +36,7 @@
 					</section>
 
 				<!-- Two -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="Research">
 						<div class="content">
 							<h2>Research</h2>
 							<p> My research focuses on using hydrodynamic simulations to study how the diffuse gas of the Interstellar Medium (ISM) is able to condense into filaments and cores, leading to the formation of stars. I'm especially interested in the interplay between gravity and turbulence in dense gas filaments and the role this has on fragmentation. I am also interested in the chemical evolution of the ISM as gas moves from the diffuse gas into dense cores, and how this influences how these structures are seen when observed with dust and molecular line tracers. 
@@ -49,17 +52,19 @@
 
 
 				<!-- Three -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="Code">
 						<div class="content">
 							<h2>Code development</h2>
 							<p> During the course of my research I have developed and contributed to codes which are of use to the wider community:
 <ul> 
+	<li>I have developed a module, FragMent, which combines a number of fragmentation analysis techniques and model selection tools to characterise the fragmentation of filaments. This code is written as a python/C module and is open source. </li>
 	<li>I have developed a fully-automated spectral fitting routine, Behind The Spectrum (BTS), which allows for the fitting of entire data cubes of optically thin lines. This code is written as a python module and is open source. </li>
-	<li>I have contributed to the code, J-plots, which is a data analysis tool used to quantify the morphology of pixelated structures using their moments. It is written as a python module and is open source
+	<li>I have contributed to the code, J-plots, which is a data analysis tool used to quantify the morphology of pixelated structures using their moments. It is written as a python module and is open source </li>
+	<li>I have contributed to the open source python package FilChaP, a tool for characterising filament properties such as their radial profiles. </li>
 </ul> 
 </p>
 							
-<a href="https://github.com/SeamusClarke/BTS" class="button">BTS Github</a> <a href="https://github.com/SJaffa/Jplots" class="button">J-plots Github</a>
+<a href="https://github.com/SeamusClarke/FragMent" class="button">FragMent Github</a> <a href="https://github.com/SeamusClarke/BTS" class="button">BTS Github</a> <a href="https://github.com/SJaffa/Jplots" class="button">J-plots Github</a> <a href="https://github.com/astrosuri/filchap" class="button">FilChaP Github</a>
 							
 						</div>
 						<div class="image">
@@ -70,33 +75,38 @@
 
 
 				<!-- Four -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="Publications">
 						<div class="content">
 							<h2>Recent publications </h2>
 							<p> 
 
-<a href = "http://adsabs.harvard.edu/abs/2018arXiv180608564C"> Synthetic CO observations of fibrous filaments: the problems of mapping from PPV to PPP : </a> 
-<br /> <u>Clarke, S. D. </u>; Whitworth, A. P. ; Spowage. R. L. ; Duarte-Cabral, A. ; Suri, S. T. ; Jaffa, S. E. ; Walch, S. ; Clark, P. C.
-<br /> Accepted 06/2018 MNRAS. </p>
-
-<a href = "http://adsabs.harvard.edu/doi/10.1093/mnras/sty696"> J plots: a new method for characterizing structures in the interstellar medium : </a> 
-<br /> Jaffa, S. E. ; Whitworth, A. P. ; <u>Clarke, S. D. </u>; Howard A. D. P. 
-<br /> Published 03/2018 MNRAS. </p>
-
-<a href = "http://adsabs.harvard.edu/abs/2017MNRAS.468.2489C"> Filamentary fragmentation in a turbulent medium: </a> 
-<br /> <u>Clarke, S. D. </u>; Whitworth, A. P. ; Duarte-Cabral, A. ; Hubber, D. A. 
-<br /> Published 06/2017 MNRAS. </p>
+<p>
+<a href = "http://adsabs.harvard.edu/abs/2019arXiv190106205C"> Determining the presence of characteristic fragmentation length-scales in filaments : </a> 
+<br /> <u>Clarke, S. D.</u> ; Williams, G. M. ; Ib&aacute;&ntilde;ez-Mej&iacute;a, J. C. ; Walch, S. 
+<br /> Accepted 01/2019 MNRAS. </p>
 
 <p>
-<a href = "http://adsabs.harvard.edu/abs/2016MNRAS.458..319C"> Perturbation growth in accreting filaments: </a>
-<br /> <u>Clarke, S. D. </u>; Whitworth, A. P. ; Hubber, D. A. 
-<br /> Published 05/2016 MNRAS. </p>
+<a href = "http://adsabs.harvard.edu/abs/2019arXiv190100176S"> The CARMA-NRO Orion Survey: The filamentary structure as seen in C<sup>18</sup>O emission: </a>
+<br /> Suri, S. T. ; Sanchez-Monge, A. ; Schilke, P. ; <u>Clarke, S. D.</u> ; Smith, R. J. ; Ossenkopf-Okada, V. ; Klessen, R. ; Padoan, P. ; Goldsmith, P. ; Arce, H. G. ; Bally, J. ; Carpenter, J. M. ; Ginsburg, A. ; Johnstone, D. ; Kauffmann, J. ; Kong, S. ; Lis, D. C. ; Mairs, S. ; Pillai, T. ; Pineda, J. E. ; Duarte-Cabral, A.  
+<br /> Accepted 12/2018 A&A. </p>
 
 <p>
-<a href = "http://adsabs.harvard.edu/abs/2015MNRAS.449.1819C"> Investigating the global collapse of filaments using smoothed particle hydrodynamics: </a>
-<br /> <u>Clarke, S. D. </u>; Whitworth, A. P. 
-<br /> Published 05/2015 MNRAS. </p>
+<a href = "http://adsabs.harvard.edu/abs/2018arXiv181203725J"> On the resolution requirements for modelling molecular gas formation in solar neighbourhood conditions: </a>
+<br /> Joshi, P. R. ; Walch, S. ; Seifried, D. ; Glover, S. C. O. ; <u>Clarke, S. D.</u> ; Weis, M.  
+<br /> Accepted 12/2018 MNRAS. </p>
 
+<p>
+<a href = "http://adsabs.harvard.edu/abs/2019MNRAS.483.2563R"> Evolution of Hubble wedges in episodic protostellar outflows: </a>
+<br /> Rohde, P. F. ; Walch, S. ; Seifried, D. ; Whitworth, A. P. ; <u>Clarke, S. D.</u> 
+<br /> Published 02/2019 MNRAS. </p>
+
+<p>
+<a href = "http://adsabs.harvard.edu/doi/10.1093/mnras/sty2507"> Synthetic [CII] emission maps of a simulated molecular cloud in formation : </a> 
+<br /> Franeck, A. ; Walch, S. ; Seifried, D. ; <u>Clarke, S. D.</u> ; Ossenkopf-Okada, V. ; Glover, S. C. O. ; Klessen, R. S. ; Girichidis, P. ; Naab. T. ; Wunsch, R. ; Clark, P. C. ; Pellegrini, E. ; Peters, T. 
+<br /> Published 12/2018 MNRAS. </p>
+
+
+<a href="index_paper.html" class="button">All papers</a>	
 <a href="https://ui.adsabs.harvard.edu/#search/q=orcid%3A0000-0001-9751-4603&sort=date%20desc%2C%20bibcode%20desc" class="button">ADS search</a>							
 <a href="thesis/Thesis.pdf" class="button">PhD. Thesis</a>
 						
@@ -107,10 +117,20 @@
 					</section>
 
 				<!-- Five -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="Presentations">
 						<div class="content">
 							<h2> Recent presentations </h2>
+
+<p>
+<u> Synthetic C<sup>18</sup>O observations of fibrous filaments: the problems of mapping from PPV to PPP </u> 
+<br /> Interstellar Filament Paradigm
+<br /> Nagoya, JP, 5-9 November , 2018  </p>
 							 
+<p>
+<u> The effects of X-rays: on the fly absorption, emission, chemistry and ionisation </u> 
+<br /> Shells, Clouds and Star Clusters in Galaxies
+<br /> Prague, CZ, 28-29 June , 2018  </p>
+
 <p>
 <u> Synthetic observations of filaments: the problems of mapping from PPV to PPP </u> 
 <br /> The Early Phase Of Star formation 2018
@@ -126,11 +146,6 @@
 <br /> Star and planet formation workshop
 <br /> Preston, UK, 2 December, 2016  </p>
 
-<p>
-<u> Fragmentation of accreting filaments: </u>
-<br /> Star formation 2016
-<br /> Exeter, UK, 21-26 August 2016 </p>
-
 						
 						
 						</div>
@@ -140,7 +155,7 @@
 					</section>
 
 				<!-- Six -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="Contact">
 						<div class="content">
 							<h2>Contact</h2>
 
@@ -157,7 +172,7 @@ Dr Seamus Clarke
 						
 						</div>
 						<div class="image">
-							<img src="images/Photo.jpg" alt="" />
+							<img src="images/Photo2.jpeg" alt="" />
 						</div>
 					</section>
 
