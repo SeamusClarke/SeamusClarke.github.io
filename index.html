@@ -1,198 +1,180 @@
 <!DOCTYPE HTML>
 <!--
-	Story by HTML5 UP
+	Read Only by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172647917-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172647917-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
-  gtag('config', 'UA-172647917-1');
-</script>
-		<title>Dr. Seamus Clarke</title>
+		  gtag('config', 'UA-172647917-1');
+		</script>
+		<title>Dr Seamus Clarke</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/photo.png" alt="" /></span>
+					<h1 id="logo"><a href="#">Dr Seamus Clarke</a></h1>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">About me</a></li>
+						<li><a href="#two">Research interests</a></li>
+						<li><a href="#three">Code development</a></li>
+						<li><a href="#four">Publications</a></li>
+						<li><a href='#five'>Contact</a></li>
+					</ul>
+				</nav>
+			</section>
 
 		<!-- Wrapper -->
-			<div id="wrapper" class="divided">
+			<div id="wrapper">
 
-				<!-- One -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-						<div class="content">
-							<h1>Dr. Seamus Clarke</h1>
-							<p class="major"> I'm a postdoctoral researcher at the <a href="https://hera.ph1.uni-koeln.de/~tac/index.html">Theoretical Astrophysics group</a> of the University of Cologne. I'm interested in star forming filaments, astrochemistry, synthetic observations and numerical methods.</p>
+				<!-- Main -->
+					<div id="main">
 
-<!--							
-<a href="#Research" class="btn btn-circle page-scroll">
-    <i class="fa fa-angle-double-down animated"></i>
-</a>
--->
+						<!-- One -->
+							<section id="one">
+								<div class="image main" data-position="center">
+									<img src="images/filament.png" alt="" class="rounded" />
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>Dr Seamus Clarke</h2>
+									</header>
+									<p>I'm an astrophysicist focusing on the problem of star formation and am part of the <a href="https://astro.uni-koeln.de/walch-gassner">Theoretical Astrophysics group</a> at the University of Cologne. I am both a theorist and an observer interested in star-forming filaments, synthetic observations, numerical methods and the application of statistical and machine learning techniques to astrophysical data.</p>
+								</div>
+							</section>
 
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h3>Research interests</h3>
+									<p>My research is split into three main topics: (magneto-)hydrodynamic simulations of filament evolution and fragmentation to determine how filament geometry affects star formation, synthetic observations of my simulations to compare to and interpret real observations, and continuum and molecular line observations of giant molecular filaments to study their kinematics and fragmentation.
 
-						</div>
-						<div class="image">
-							<img src="images/filament.png" alt="" />
-						</div>
-					</section>
+									I am also interested in larger-scale problems such as the formation of molecular clouds and the effects of supernovae on dense molecular gas, as well as smaller-scale problems such as disk and outflow physics, and hot-core chemistry. </p>
+									
+									<a href="research.html" class="button primary">For more details on my recent work</a></li>
 
-				<!-- Two -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="Research">
-						<div class="content">
-							<h2>Research</h2>
-							<p> My research focuses on using hydrodynamic simulations to study how the diffuse gas of the Interstellar Medium (ISM) is able to condense into filaments and cores, leading to the formation of stars. I'm especially interested in the interplay between gravity and turbulence in dense gas filaments and the role this has on fragmentation. I am also interested in the chemical evolution of the ISM as gas moves from the diffuse gas into dense cores, and how this influences how these structures are seen when observed with dust and molecular line tracers. 
-</p>
-							<ul class="actions vertical">
-								<li><a href="index_research.html" class="button">More detail</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/mom0.png" alt="" />
-						</div>
-					</section>
+									<p></p>
 
+									<a class="img"><img src="images/movie.gif" alt="" /></a>
+									
+								</div>
+							</section>
 
-				<!-- Three -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="Code">
-						<div class="content">
-							<h2>Code development</h2>
-							<p> During the course of my research I have developed and contributed to codes which are of use to the wider community:
-<ul> 
-	<li>I have developed a module, FragMent, which combines a number of fragmentation analysis techniques and model selection tools to characterise the fragmentation of filaments. This code is written as a python/C module and is open source. </li>
-	<li>I have developed a fully-automated spectral fitting routine, Behind The Spectrum (BTS), which allows for the fitting of entire data cubes of optically thin lines. This code is written as a python module and is open source. </li>
-	<li>I have contributed to the code, J-plots, which is a data analysis tool used to quantify the morphology of pixelated structures using their moments. It is written as a python module and is open source </li>
-	<li>I have contributed to the open source python package FilChaP, a tool for characterising filament properties such as their radial profiles. </li>
-</ul> 
-</p>
-							
-<a href="https://github.com/SeamusClarke/FragMent" class="button">FragMent Github</a> <a href="https://github.com/SeamusClarke/BTS" class="button">BTS Github</a> <a href="https://github.com/SJaffa/Jplots" class="button">J-plots Github</a> <a href="https://github.com/astrosuri/filchap" class="button">FilChaP Github</a>
-							
-						</div>
-						<div class="image">
-							<img src="images/Spectrum.png" alt="" />
-						</div>
-					</section>
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h3>Code development</h3>
+									<p>During the course of my research I have developed and contributed to a number of analysis codes. As I believe in open science I have made these public for use by the wider star formation community.</p>
+									
+									<ul> 
+									<li>FragMent is a Python/C module which combines a number of fragmentation analysis techniques and model selection tools to characterise the fragmentation of filaments. While it was designed specifically for filament fragmentation it can be applied to study any form of fragmentation.</li>
+
+									<p><a href="https://github.com/SeamusClarke/FragMent" class="button primary icon brands fa-github">FragMent Github</a></p>
+
+									<li>BTS is a Python module designed to fit optically thin spectral line emission. It is fully-automated and can deal with multiple velocity components, allowing for the quick and easy fitting of data cubes containing 10,000s of complex spectra.</li>
+
+									<p><a href="https://github.com/SeamusClarke/BTS" class="button primary icon brands fa-github">BTS Github</a></p>
+
+									<li>J-plots is a Python module written by Dr Sarah Jaffa which quantifies the 2D and 3D morphology of pixelated structures using their moments of inertia. This technique can be applied to volume density cubes, column density maps or molecular line emission.</li>
+
+									<p><a href="https://github.com/SJaffa/Jplots" class="button primary icon brands fa-github">J-plots Github</a></p>
 
 
+									<li>FilChaP is a Python module written by Dr Sümeyye Suri which allows for the easy characterisation of filament properties, such as their width and length, in 2D and 3D. </li>
 
-				<!-- Four -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="Publications">
-						<div class="content">
-							<h2>Recent publications </h2>
-							<p> 
+									<p><a href="https://github.com/astrosuri/filchap" class="button primary icon brands fa-github">FilChaP Github</a></p>
 
-<p>
-<a href = "https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.4390C/abstract"> The hierarchical fragmentation of filaments and the role of sub-filaments: </a>
-<br /> <u>Clarke, S. D.</u> ; Williams, G. M. ; Walch, S.  
-<br /> Published 08/2020 MNRAS. </p>
+									</ul>
 
-<p>
-<a href = "https://ui.adsabs.harvard.edu/abs/2020A%26A...635A...2S/abstract"> Physical Properties of the star-forming clusters in NGC 6334: </a>
-<br /> Sadaghiani, M. ; S&aacute;nchez-Monge, A. ; Schilke, P. ; Liu, H. B. ; <u>Clarke, S. D.</u> ; Zhang, Q. ; Girart, J. M. ; Seifried, D. ;  
-<br /> Aghababaei, A. ; Li, H.; Ju&aacute;rez, C. ; Tang, K. S.  
-<br /> Published 03/2020 A&A. </p>
+								</div>
+							</section>
 
-<p>
-<a href = "https://ui.adsabs.harvard.edu/abs/2019MNRAS.489..962H/abstract"> L1495 Revisited: A PPMAP View of a Star-Forming Filament: </a>
-<br /> Howard, A. D. P. ; Whitworth, A. P. ; Marsh, K. A. ; <u>Clarke, S. D.</u> ; Griffin, M. J. ; Smith, M. W. L. ; Lomax, O. D. 
-<br /> Published 10/2019 MNRAS. </p>
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3>Publications </h3>
 
-<p>
-<a href = "https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.1220I/abstract"> Dust charge distribution in the interstellar medium : </a> 
-<br /> Ib&aacute;&ntilde;ez-Mej&iacute;a, J. C. ; Walch, S. ; Ivlev, A. V. ; <u>Clarke, S. D.</u> ; Caselli, P. ; Joshi, P. R. 
-<br /> Published 05/2019 MNRAS. </p>
+									<p>Here is a list of my recent publications. Below one can find a complete list of my publications, a link to NASA ADS, and a copy of my thesis.</p>
 
-<p>
-<a href = "https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.4024C/abstract"> Determining the presence of characteristic fragmentation length-scales in filaments : </a> 
-<br /> <u>Clarke, S. D.</u> ; Williams, G. M. ; Ib&aacute;&ntilde;ez-Mej&iacute;a, J. C. ; Walch, S. 
-<br /> Published 04/2019 MNRAS. </p>
+									<p>
+									<a href = "https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.4390C/abstract"> <b>The hierarchical fragmentation of filaments and the role of sub-filaments:</b> </a>
+									<br /> <u>Clarke, S. D.</u> ; Williams, G. M. ; Walch, S.  
+									<br /> Published 08/2020 MNRAS. </p>
 
-<a href="index_paper.html" class="button">All papers</a>	
-<a href="https://ui.adsabs.harvard.edu/#search/q=orcid%3A0000-0001-9751-4603&sort=date%20desc%2C%20bibcode%20desc" class="button">ADS search</a>							
-<a href="thesis/Thesis.pdf" class="button">PhD. Thesis</a>
+									<p>
+									<a href = "https://ui.adsabs.harvard.edu/abs/2020A%26A...635A...2S/abstract"> <b>Physical Properties of the star-forming clusters in NGC 6334:</b> </a>
+									<br /> Sadaghiani, M. ; S&aacute;nchez-Monge, A. ; Schilke, P. ; Liu, H. B. ; <u>Clarke, S. D.</u> ; Zhang, Q. ; Girart, J. M. ; Seifried, D. ;  Aghababaei, A. ; Li, H.; Ju&aacute;rez, C. ; Tang, K. S.  
+									<br /> Published 03/2020 A&A. </p>
+
+									<p>
+									<a href = "https://ui.adsabs.harvard.edu/abs/2019MNRAS.489..962H/abstract"> <b>L1495 Revisited: A PPMAP View of a Star-Forming Filament:</b> </a>
+									<br /> Howard, A. D. P. ; Whitworth, A. P. ; Marsh, K. A. ; <u>Clarke, S. D.</u> ; Griffin, M. J. ; Smith, M. W. L. ; Lomax, O. D. 
+									<br /> Published 10/2019 MNRAS. </p>
+
+									<p>
+									<a href = "https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.1220I/abstract"> <b>Dust charge distribution in the interstellar medium:</b> </a> 
+									<br /> Ib&aacute;&ntilde;ez-Mej&iacute;a, J. C. ; Walch, S. ; Ivlev, A. V. ; <u>Clarke, S. D.</u> ; Caselli, P. ; Joshi, P. R. 
+									<br /> Published 05/2019 MNRAS. </p>
+
+									<p>
+									<a href = "https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.4024C/abstract"> <b>Determining the presence of characteristic fragmentation length-scales in filaments:</b> </a> 
+									<br /> <u>Clarke, S. D.</u> ; Williams, G. M. ; Ib&aacute;&ntilde;ez-Mej&iacute;a, J. C. ; Walch, S. 
+									<br /> Published 04/2019 MNRAS. </p>
+
+									<p><a href="publications.html" class="button primary">A complete list of publications</a>
+									<a href="https://ui.adsabs.harvard.edu/#search/q=orcid%3A0000-0001-9751-4603&sort=date%20desc%2C%20bibcode%20desc" class="button primary">NASA ADS search</a>
+									<a href="thesis/Thesis.pdf" class="button primary"> My PhD. Thesis</a></p>
+									
+								</div>
+							</section>
+
+						<!-- Five -->
 						
-						</div>
-						<div class="image">
-							<img src="images/channel.gif" alt="" />
-						</div>
-					</section>
+							<section id="five">
+								<div class="container">
+									<h3>Contact</h3>
 
-				<!-- Five -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="Presentations">
-						<div class="content">
-							<h2> Recent presentations </h2>
+									<p>
+									Dr Seamus Clarke
+									<br /> I. Physikalisches Institut,
+									<br /> Universit&aumlt zu K&oumlln,
+									<br /> Z&uumllpicher str. 77,
+									<br /> D-50937 K&oumlln,
+									<br /> Germany
+									</p>
 
-<p>
-<u> Detecting characteristic filament fragmentation length-scales</u>
-<br /> SILCC Workshop
-<br /> Bad Neuenahr, DE, 14-15 March, 2019  </p>
+									<p> 
+									<a class="icon solid fa-envelope"> </a> clarke at ph1.uni-koeln.de
+									<br/> <a class="icon brands fa-github"> </a> <a href = "https://github.com/SeamusClarke"> https://github.com/SeamusClarke </a> 
+									<br/> <a href = "https://orcid.org/0000-0001-9751-4603"> ORCID: 0000-0001-9751-4603 </a>
+									</p>
 
-<p>
-<u> Synthetic C<sup>18</sup>O observations of fibrous filaments: the problems of mapping from PPV to PPP </u> 
-<br /> Interstellar Filament Paradigm
-<br /> Nagoya, JP, 5-9 November , 2018  </p>
-							 
-<p>
-<u> The effects of X-rays: on the fly absorption, emission, chemistry and ionisation </u> 
-<br /> Shells, Clouds and Star Clusters in Galaxies
-<br /> Prague, CZ, 28-29 June , 2018  </p>
-
-<p>
-<u> Synthetic observations of filaments: the problems of mapping from PPV to PPP </u> 
-<br /> The Early Phase Of Star formation 2018
-<br /> Ringberg, DE, 13-18 May , 2018  </p>
-
-<p>
-<u> Synthetic observations of filaments: Mapping from PPV to PPP </u> 
-<br /> Current and future perspectives of chemical modelling in astrophysics
-<br /> Hamburg, DE, 17-19 July , 2017  </p>
-
-						
-						
-						</div>
-						<div class="image">
-							<img src="images/rotation.gif" alt="" />
-						</div>
-					</section>
-
-				<!-- Six -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="Contact">
-						<div class="content">
-							<h2>Contact</h2>
-
-<p>
-Dr Seamus Clarke
-<br /> I. Physikalisches Institut,
-<br /> Universit&aumlt zu K&oumlln,
-<br /> Z&uumllpicher str. 77,
-<br /> D-50937 K&oumlln,
-<br /> Germany
-</p>
-
-<p> Email: clarke at ph1.uni-koeln.de </p>
-						
-						</div>
-						<div class="image">
-							<img src="images/photo.png" alt="" />
-						</div>
-					</section>
-
-				
+								</div>
+							</section>
 
 				<!-- Footer -->
-					<footer class="wrapper style1 align-center">
-						<div class="inner">
-							<p>&copy; Seamus Clarke. Page template: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Seamus Clarke. Page template: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
 						</div>
-					</footer>
+					</section>
 
 			</div>
 
@@ -200,7 +182,8 @@ Dr Seamus Clarke
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
