@@ -24,7 +24,8 @@
 						<li><a href="#one" class="active"> Overview </a></li>
 						<li><a href="#two"> Numerical simulations </a></li>
 						<li><a href="#three">Synthetic observations</a></li>
-						<li><a href="#four">Observations</a></li>
+						<li><a href="#four">Analysis tools</a></li>
+						<li><a href="#five">Observations</a></li>
 						<li><a href="index.html">Return to home page</a></li>
 					</ul>
 				</nav>
@@ -48,6 +49,8 @@
 									<p> 
 									My PhD and postdoctoral career has been focused on the role of filaments in the star formation process. This problem has risen to prominence as the Herschel Space Observatory showed that filamentary structures are ubiquitous in the interstellar medium, and importantly that most new stars are born within these filaments. It is currently unclear just what this means for star formation however as filament geometry changes how gravity, turbulence, magnetic fields and feedback act and interact with each other. My work tries to answer this question using numerical simulations, synthetic observations and real observations. 
 									</p>
+
+									<p> I am also highly interested in statistical techniques as well as testing and developing new analysis tools. Due to the large volume of data that is currently involved astrophysics, standardised, efficient, tested and often automated analysis tools are essential. So far I have developed tools to <a href="https://github.com/SeamusClarke/BTS"><b>fit molecular line spectra</b></a>, <a href="https://github.com/SeamusClarke/RJplots"><b>classify structure morphology</b></a> and <a href="https://github.com/SeamusClarke/FragMent"><b>detect fragmentation length-scales</b></a>.</p>
 								</div>
 							</section>
 
@@ -60,11 +63,6 @@
 									<span class="image fit"><img src="images/2020.png" alt="" /></span> <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.4390C/abstract"><b>In my 2020 paper</b></a> I investigated the hierarchical fragmentation of accreting, turbulent filaments. In my earlier work I discovered that internal turbulence leads to the formation of smaller sub-filaments within filaments, but what this means for the formation of cores was unclear. Here I found that cores form in two environments: (i) as isolated cores, or small chains of cores, on a single sub-filament, or (ii) as an ensemble of cores located at the junction of sub-filaments. I termed these <i>isolated</i> and <i>hub</i> cores, respectively. I showed that these core populations are statistically different from each other. Hub cores have a greater mean mass than isolated cores, and the mass distribution of hub cores is significantly wider than isolated cores. Interestingly, this fragmentation is reminiscent of parsec-scale hub-filament systems, showing that the combination of turbulence and gravity leads to similar fragmentation signatures on multiple scales, even within filaments.</p>
 
 									<p> I also applied my FragMent module to study the fragmentation pattern of the filament into cores. I found that the fact that fragmentation proceeds through sub-filaments suggests that there exists no characteristic fragmentation length-scale between cores. This is in opposition to earlier theoretical works studying fibre-less filaments which suggest a strong tendency towards the formation of quasi-periodically spaced cores, but in better agreement with observations. </p>
-
-
-									<p>
-									<span class="image fit"><img src="images/2019.png" alt="" /></span> <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.4024C/abstract"><b>In my 2019 paper</b></a> I presented my fragmentation module FragMent. Many models of filament fragmentation suggest that fragmentation characteristic scales should occur but no one knew which techniques were best at detecting them and how many cores would be necessary. I compiled a number of fragmentation analysis techniques and applied them to filaments, testing their sensitivity to characteristic scales. I also developed null hypothesis tests which should be used when judging the statistical significance of any suspected characteristic scales. From these I presented the best practice for investigating filament fragmentation: that a combination of the nearest neighbour separation, minimum spanning tree and two point correlation techniques should be used to detect characteristic scales; then a null hypothesis should be used to test the significance of the detection; and if the null is rejected one may decide if the observed fragmentation is best described by single-tier or two-tier fragmentation, using either Akaike's information criterion or the Bayes factor. </p>
-
 
 									<p>
 									<span class="image fit"><img src="images/2017.png" alt="" /></span> <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.468.2489C/abstract"><b>In my 2017 paper</b></a> I presented simulations building upon my earlier work and investigated the effects of turbulence on the fragmentation of filaments. I showed that filaments that experience a weakly turbulent accretion flow fragment in a two-tier hierarchical fashion, similar to the fragmentation pattern seen in the Orion Integral Shaped Filament. Increasing the energy in the turbulent velocity field results in more sub-structure within the filaments, and one sees a shift from gravity-dominated fragmentation to turbulence-dominated fragmentation. The sub-structure formed in the filaments is elongated and roughly parallel to the longitudinal axis of the filament, i,e, sub-filaments. I showed that the formation of these sub-filaments structures is linked to the vorticity of the velocity field inside the filament, driven by the accretion. I also noted that the supercritical filaments that contain sub-filaments do not collapse radially, a possible solution to the problem of wide supercritical filaments. </p>
@@ -95,6 +93,20 @@
 
 							<!-- Four -->
 							<section id="four">
+								<div class="container">
+									<h3>Analysis tools</h3>
+
+									<p>
+									<span class="image fit"><img src="images/2022.png" alt="" /></span> <a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220807509C/abstract"><b>In my 2022 paper</b></a> I presented the structure classification module RJ-plots. The large data sets resulting from observational surveys and state-of-the-art simulations studying hierarchical structures means that identification and classification must be done in an automated fashion to be efficient. RJ-plots allows clear distinctions between quasi-circular/elongated structures and centrally over/under-dense structures. I used the recent morphological SEDIGISM catalogue of Neralwar et al. (2022) to show the improvement in classification resulting from RJ-plots, especially for ring-like and concentrated cloud types. I also found a strong correlation between the central concentration of a structure and its star formation efficiency and dense gas fraction, as well as a lack of correlation with elongation. Furthermore, I used the accreting filament simulations from <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.4390C/abstract"><b>my 2020 paper</b></a> to highlight a multi-scale application of RJ-plots, finding that while spherical structures become more common at smaller scales they are never the dominant structure down to  r∼0.03  pc.</p>
+
+									<p>
+									<span class="image fit"><img src="images/2019.png" alt="" /></span> <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.4024C/abstract"><b>In my 2019 paper</b></a> I presented my fragmentation module FragMent. Many models of filament fragmentation suggest that fragmentation characteristic scales should occur but no one knew which techniques were best at detecting them and how many cores would be necessary. I compiled a number of fragmentation analysis techniques and applied them to filaments, testing their sensitivity to characteristic scales. I also developed null hypothesis tests which should be used when judging the statistical significance of any suspected characteristic scales. From these I presented the best practice for investigating filament fragmentation: that a combination of the nearest neighbour separation, minimum spanning tree and two point correlation techniques should be used to detect characteristic scales; then a null hypothesis should be used to test the significance of the detection; and if the null is rejected one may decide if the observed fragmentation is best described by single-tier or two-tier fragmentation, using either Akaike's information criterion or the Bayes factor. </p>
+
+								</div>
+							</section>
+
+							<!-- Five -->
+							<section id="five">
 								<div class="container">
 									<h3>Observations</h3>
 
